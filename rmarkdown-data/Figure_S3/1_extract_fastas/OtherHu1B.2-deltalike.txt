@@ -1,0 +1,5 @@
+map|AGSR|A/BEIJING/262/1995|hu-vaccine|delta-like|1995
+map|AGSR|A/NEW_CALEDONIA/20/1999|hu-vaccine|delta-like|1999
+map|Agonly|A/SWINE/MEXICO/AVX18/2012|swine|delta-like|2012
+map|Agonly|A/SWINE/MEXICO/AVX61/2013|swine|delta-like|2013
+

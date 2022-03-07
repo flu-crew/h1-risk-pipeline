@@ -1,0 +1,69 @@
+---
+title: "agml-colours2"
+author: "DV"
+date: "13/09/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+rm(list = ls())
+```
+
+```{r}
+library(readr)
+library(ggplot2) 
+library(ggpmisc)
+require(cowplot)
+library(gridExtra)
+library(tidyverse)
+```
+
+```{r}
+gen_ag <- read_csv("data_for_plotting/swine_variant_distances_by_global_lin.csv")
+
+gen_ag<- na.omit(gen_ag)
+
+sort(unique(gen_ag$linpairs))
+
+within <- c("1A:1A","1B:1B")
+
+gen_ag_withinonly <- gen_ag[gen_ag$linpairs %in% within,]
+
+sort(unique(gen_ag_withinonly$linpairs))
+head(gen_ag_withinonly)
+
+```
+
+```{r}
+
+png(file = "figures/genvag_global_aa_faceted.png",
+  width = 11.6*300,        # 8 x 300 pixels
+  height = 8.2*300,
+  res = 300,# 300 pixels per inch
+  pointsize = 7)      
+
+p <- ggplot(data = gen_ag_withinonly, aes(x = aa_distances, y = agdistances, colour=linpairs)) +
+  labs(x="Pairwise within-lineage amino acid alignment distances", y="Antigenic distance")+
+  scale_color_brewer(palette = "Set1")+
+  geom_point() +
+  stat_smooth(aes(x=aa_distances, y=agdistances, colour=linpairs), method="lm",inherit.aes = FALSE, formula = y ~ x) + 
+  #geom_smooth(method = "lm", se=FALSE, formula = y ~ x)+
+  stat_poly_eq(formula = y ~ x, 
+              aes(label = paste(..eq.label.., ..rr.label.., sep = "~~~")), 
+              parse = TRUE, size = 4) +         
+  labs(colour="Lineages") + 
+  facet_wrap(~linpairs) +
+  theme(strip.text.x = element_text(size = 14))
+  #theme(legend.text=element_text(size=8))
+  
+p
+dev.off()
+
+```
+
+
+

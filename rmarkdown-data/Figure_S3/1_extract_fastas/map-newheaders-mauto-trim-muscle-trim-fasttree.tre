@@ -1,0 +1,169 @@
+#NEXUS
+begin taxa;
+	dimensions ntax=67;
+	taxlabels
+	'map|AGSR|A/BEIJING/262/1995|hu-vaccine|delta-like|1995'[&aa_129="T",aa_130="del"]
+	'map|AGSR|A/BRAZIL/11/1978|hu-vaccine|Other|1978'[&aa_129="T",aa_130="R"]
+	'map|AGSR|A/CALIFORNIA/4/2009|hu-vaccine|npdm|2009'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/MEXICO/4108/2009|hu-seasonal|npdm|2009'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/MICHIGAN/45/2015|hu-vaccine|npdm|2015'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/NEW_CALEDONIA/20/1999|hu-vaccine|delta-like|1999'[&aa_129="T",aa_130="del"]
+	'map|AGSR|A/OHIO/9/2015|hu-variant|gamma-variant|2015'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/SOLOMON_ISLANDS/3/2006|hu-vaccine|delta-like|2006'[&aa_129="T",aa_130="del"]
+	'map|AGSR|A/SWINE/ALBERTA/SD0014/2013|swine|alpha2|2013'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/SWINE/ALBERTA/SD0125/2015|swine|alpha2|2015'[&aa_129="T",aa_130="R"]
+	'map|AGSR|A/SWINE/ALBERTA/SD0154/2016|swine|alpha2|2016'[&aa_129="S",aa_130="K"]
+	'map|AGSR|A/SWINE/ILLINOIS/A01493472/2014|swine|npdm|2014'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/SWINE/IOWA/A01731653/2016|swine|gamma|2016'[&aa_129="D",aa_130="R"]
+	'map|AGSR|A/SWINE/MANITOBA/D0333/2014|swine|alpha3a|2014'[&aa_129="N",aa_130="K"]
+	'map|AGSR|A/SWINE/MANITOBA/D0392/2014|swine|alpha3b-2|2014'[&aa_129="del",aa_130="del"]
+	'map|AGSR|A/SWINE/MANITOBA/SD0114/2015|swine|alpha3b-2|2015'[&aa_129="del",aa_130="del"]
+	'map|AGSR|A/SWINE/MINNESOTA/A01134353/2011|swine|delta1a|2011'[&aa_129="T",aa_130="del"]
+	'map|AGSR|A/SWINE/MINNESOTA/A01781045/2016|swine|alpha3b-2|2016'[&aa_129="del",aa_130="del"]
+	'map|AGSR|A/SWINE/NEBRASKA/A01492366/2014|swine|delta1a|2014'[&aa_129="T",aa_130="del"]
+	'map|AGSR|A/SWINE/OKLAHOMA/A01409770/2014|swine|delta2|2014'[&aa_129="T",aa_130="del"]
+	'map|AGSR|A/SWINE/SASKATCHEWAN/SD0102/2015|swine|alpha3b-2|2015'[&aa_129="del",aa_130="del"]
+	'map|AGSR|A/TAIWAN/1/1986|hu-vaccine|delta-like|1986'[&aa_129="T",aa_130="K"]
+	'map|Agonly|A/BRISBANE/59/2007|hu-vaccine|delta-like|2007'[&aa_129="T",aa_130="del"]
+	'map|Agonly|A/MICHIGAN/2/2003|hu-vaccine|delta-like|2003'[&aa_129="T",aa_130="del"]
+	'map|Agonly|A/MINNESOTA/45/2016|hu-variant|alpha3b-2-variant|2016'[&aa_129="del",aa_130="del"]
+	'map|Agonly|A/SINGAPORE/1986|hu-vaccine|delta-like|1986'[&aa_129="T",aa_130="K"]
+	'map|Agonly|A/SWINE/ALBERTA/SD0191/2016|swine|alpha3b-2|2016'[&aa_129="del",aa_130="del"]
+	'map|Agonly|A/SWINE/ILLINOIS/A01644323/2018|swine|delta1|2018'[&aa_129="T",aa_130="del"]
+	'map|Agonly|A/SWINE/ILLINOIS/A02139356/2018|swine|delta2|2018'[&aa_129="T",aa_130="del"]
+	'map|Agonly|A/SWINE/MANITOBA/D0348/2014|swine|alpha3b-2|2014'[&aa_129="del",aa_130="del"]
+	'map|Agonly|A/SWINE/MEXICO/AVX18/2012|swine|delta-like|2012'[&aa_129="S",aa_130="del"]
+	'map|Agonly|A/SWINE/MEXICO/AVX23/2012|swine|gamma2-beta-like|2012'[&aa_129="D",aa_130="R"]
+	'map|Agonly|A/SWINE/MEXICO/AVX31/2012|swine|npdm|2012'[&aa_129="N",aa_130="K"]
+	'map|Agonly|A/SWINE/MEXICO/AVX44/2012|swine|npdm|2012'[&aa_129="N",aa_130="N"]
+	'map|Agonly|A/SWINE/MEXICO/AVX61/2013|swine|delta-like|2013'[&aa_129="T",aa_130="del"]
+	'map|Agonly|A/SWINE/MICHIGAN/A01104117/2018|swine|delta2|2018'[&aa_129="T",aa_130="del"]
+	'map|Agonly|A/SWINE/MINNESOTA/A01567490/2014|swine|gamma|2014'[&aa_129="N",aa_130="R"]
+	'map|Agonly|A/SWINE/NORTH_CAROLINA/A01730369/2016|swine|gamma|2016'[&aa_129="N",aa_130="R"]
+	'map|Agonly|A/SWINE/NORTH_CAROLINA/A01797415/2015|swine|gamma|2015'[&aa_129="N",aa_130="R"]
+	'map|Agonly|A/SWINE/NORTH_CAROLINA/A01841602/2015|swine|gamma|2015'[&aa_129="N",aa_130="K"]
+	'map|Agonly|A/SWINE/NORTH_CAROLINA/A02076926/2015|swine|gamma|2015'[&aa_129="N",aa_130="K"]
+	'map|Agonly|A/SWINE/OHIO/A01847657/2015|swine|gamma|2015'[&aa_129="N",aa_130="K"]
+	'map|Agonly|A/SWINE/SASKATCHEWAN/SD0094/2015|swine|alpha2|2015'[&aa_129="T",aa_130="K"]
+	'map|Agonly|A/SWINE/SASKATCHEWAN/SD0200/2016|swine|alpha3b-2|2016'[&aa_129="del",aa_130="del"]
+	'map|Agonly|A/TEXAS/36/1991|hu-vaccine|delta-like|1991'[&aa_129="T",aa_130="K"]
+	'map|SRonly|A/SWINE/ILLINOIS/00685/2005|swine|delta2|2005'[&aa_129="T",aa_130="del"]
+	'map|SRonly|A/SWINE/IOWA/1973|swine|alpha1|1973'[&aa_129="N",aa_130="I"]
+	'map|SRonly|A/SWINE/KANSAS/00246/2004|swine|gamma|2004'[&aa_129="N",aa_130="R"]
+	'map|SRonly|A/SWINE/MINNESOTA/00194/2003|swine|gamma|2003'[&aa_129="N",aa_130="R"]
+	'map|SRonly|A/SWINE/MINNESOTA/02053/2008|swine|alpha2|2008'[&aa_129="N",aa_130="R"]
+	'map|SRonly|A/SWINE/MINNESOTA/1192/2001|swine|gamma-npdm-like|2001'[&aa_129="D",aa_130="R"]
+	'map|SRonly|A/SWINE/MINNESOTA/37866/1999|swine|gamma2-beta-like|1999'[&aa_129="S",aa_130="R"]
+	'map|SRonly|A/SWINE/MISSOURI/02060/2008|swine|gamma|2008'[&aa_129="D",aa_130="R"]
+	'map|SRonly|A/SWINE/NORTH_CAROLINA/02023/2008|swine|gamma|2008'[&aa_129="N",aa_130="R"]
+	'map|SRonly|A/SWINE/OHIO/02026/2008|swine|gamma|2008'[&aa_129="N",aa_130="R"]
+	'map|SRonly|A/SWINE/OHIO/511445/2007|swine|gamma|2007'[&aa_129="N",aa_130="R"]
+	'map|SRonly|A/SWINE/SASKATCHEWAN/SD0142/2016|swine|alpha3b-2|2016'[&aa_129="del",aa_130="del"]
+	'map|SRonly|A/SWINE/SOUTH_DAKOTA/A01349306/2013|swine|gamma2|2013'[&aa_129="N",aa_130="K"]
+	'map|excluded|A/CHILE/1/1983|hu-vaccine|Other|1983'[&aa_129="T",aa_130="K"]
+	'map|excluded|A/SWINE/ILLINOIS/A01203922/2012|swine|gamma2|2012'[&aa_129="S",aa_130="K"]
+	'map|excluded|A/SWINE/IOWA/A02025359/2015|swine|alpha3b-2|2015'[&aa_129="del",aa_130="del"]
+	'map|excluded|A/SWINE/KENTUCKY/02086/2008|swine|beta|2008'[&aa_129="D",aa_130="K"]
+	'map|excluded|A/SWINE/MINNESOTA/02011/2008|swine|delta-like|2008'[&aa_129="N",aa_130="del"]
+	'map|excluded|A/SWINE/SOUTH_DAKOTA/A01349341/2013|swine|delta1|2013'[&aa_129="A",aa_130="del"]
+	'map|excluded|A/SWINE/SOUTH_DAKOTA/A01823237/2015|swine|alpha3b-1|2015'[&aa_129="N",aa_130="K"]
+	'map|excluded|A/USSR/1977|hu-vaccine|Other|1977'[&aa_129="T",aa_130="R"]
+	'map|notfound|A/SWINE/MINNESOTA/A01392045/2013|swine|delta1a|2013'[&aa_129="T",aa_130="del"]
+;
+end;
+
+begin trees;
+	tree tree_1 = [&R] ('map|excluded|A/SWINE/KENTUCKY/02086/2008|swine|beta|2008'[&aa_130="K",aa_129="D"]:0.07385,(('map|SRonly|A/SWINE/IOWA/1973|swine|alpha1|1973'[&aa_130="I",aa_129="N"]:0.01285,(((('map|excluded|A/CHILE/1/1983|hu-vaccine|Other|1983'[&aa_130="K",aa_129="T"]:0.0109,('map|AGSR|A/BRAZIL/11/1978|hu-vaccine|Other|1978'[&aa_130="R",aa_129="T"]:0.00188,'map|excluded|A/USSR/1977|hu-vaccine|Other|1977'[&aa_130="R",aa_129="T"]:0.01211)[&label=0.985]:0.00622)[&label=1.0]:0.01723,('map|AGSR|A/TAIWAN/1/1986|hu-vaccine|delta-like|1986'[&aa_130="K",aa_129="T"]:0.00425,('map|Agonly|A/TEXAS/36/1991|hu-vaccine|delta-like|1991'[&aa_130="K",aa_129="T"]:0.00615,'map|AGSR|A/BEIJING/262/1995|hu-vaccine|delta-like|1995'[&aa_130="del",aa_129="T"]:0.02324)[&label=0.994]:0.01072)[&label=0.719]:5.4E-4)[&label=0.853]:5.1E-4,'map|Agonly|A/SINGAPORE/1986|hu-vaccine|delta-like|1986'[&aa_130="K",aa_129="T"]:0.00274)[&label=0.911]:0.01295,(((('map|SRonly|A/SWINE/ILLINOIS/00685/2005|swine|delta2|2005'[&aa_130="del",aa_129="T"]:0.00667,('map|AGSR|A/SWINE/OKLAHOMA/A01409770/2014|swine|delta2|2014'[&aa_130="del",aa_129="T"]:0.01909,('map|Agonly|A/SWINE/ILLINOIS/A02139356/2018|swine|delta2|2018'[&aa_130="del",aa_129="T"]:0.00431,'map|Agonly|A/SWINE/MICHIGAN/A01104117/2018|swine|delta2|2018'[&aa_130="del",aa_129="T"]:0.01185)[&label=1.0]:0.03227)[&label=0.999]:0.02769)[&label=0.995]:0.01423,('map|AGSR|A/SOLOMON_ISLANDS/3/2006|hu-vaccine|delta-like|2006'[&aa_130="del",aa_129="T"]:0.01043,'map|Agonly|A/BRISBANE/59/2007|hu-vaccine|delta-like|2007'[&aa_130="del",aa_129="T"]:0.01493)[&label=0.992]:0.01155)[&label=0.904]:0.00363,('map|AGSR|A/NEW_CALEDONIA/20/1999|hu-vaccine|delta-like|1999'[&aa_130="del",aa_129="T"]:0.00254,('map|Agonly|A/SWINE/MEXICO/AVX18/2012|swine|delta-like|2012'[&aa_130="del",aa_129="S"]:0.04881,'map|Agonly|A/SWINE/MEXICO/AVX61/2013|swine|delta-like|2013'[&aa_130="del",aa_129="T"]:0.04533)[&label=0.323]:0.00232)[&label=0.796]:7.5E-4)[&label=0.785]:5.5E-4,((('map|excluded|A/SWINE/SOUTH_DAKOTA/A01349341/2013|swine|delta1|2013'[&aa_130="del",aa_129="A"]:0.03477,('map|AGSR|A/SWINE/MINNESOTA/A01134353/2011|swine|delta1a|2011'[&aa_130="del",aa_129="T"]:0.00912,('map|Agonly|A/SWINE/ILLINOIS/A01644323/2018|swine|delta1|2018'[&aa_130="del",aa_129="T"]:0.0221,('map|notfound|A/SWINE/MINNESOTA/A01392045/2013|swine|delta1a|2013'[&aa_130="del",aa_129="T"]:0.00196,'map|AGSR|A/SWINE/NEBRASKA/A01492366/2014|swine|delta1a|2014'[&aa_130="del",aa_129="T"]:0.00263)[&label=0.963]:0.00564)[&label=0.998]:0.01567)[&label=0.97]:0.00802)[&label=0.999]:0.0191,'map|excluded|A/SWINE/MINNESOTA/02011/2008|swine|delta-like|2008'[&aa_130="del",aa_129="N"]:0.02168)[&label=0.978]:0.00733,'map|Agonly|A/MICHIGAN/2/2003|hu-vaccine|delta-like|2003'[&aa_130="del",aa_129="T"]:9.7E-4)[&label=1.0]:0.01205)[&label=0.997]:0.02731)[&label=1.0]:0.25929)[&label=1.0]:0.03933,(((('map|AGSR|A/SWINE/ALBERTA/SD0154/2016|swine|alpha2|2016'[&aa_130="K",aa_129="S"]:0.04397,'map|AGSR|A/SWINE/ALBERTA/SD0014/2013|swine|alpha2|2013'[&aa_130="K",aa_129="N"]:0.03781)[&label=0.913]:0.00568,('map|Agonly|A/SWINE/SASKATCHEWAN/SD0094/2015|swine|alpha2|2015'[&aa_130="K",aa_129="T"]:0.00501,'map|AGSR|A/SWINE/ALBERTA/SD0125/2015|swine|alpha2|2015'[&aa_130="R",aa_129="T"]:0.01257)[&label=1.0]:0.02788)[&label=0.237]:0.00233,'map|SRonly|A/SWINE/MINNESOTA/02053/2008|swine|alpha2|2008'[&aa_130="R",aa_129="N"]:0.00899)[&label=1.0]:0.07086,('map|AGSR|A/SWINE/MANITOBA/D0333/2014|swine|alpha3a|2014'[&aa_130="K",aa_129="N"]:0.08484,('map|excluded|A/SWINE/SOUTH_DAKOTA/A01823237/2015|swine|alpha3b-1|2015'[&aa_130="K",aa_129="N"]:0.03486,('map|AGSR|A/SWINE/MANITOBA/D0392/2014|swine|alpha3b-2|2014'[&aa_130="del",aa_129="del"]:0.00954,((('map|Agonly|A/MINNESOTA/45/2016|hu-variant|alpha3b-2-variant|2016'[&aa_130="del",aa_129="del"]:0.0077,('map|excluded|A/SWINE/IOWA/A02025359/2015|swine|alpha3b-2|2015'[&aa_130="del",aa_129="del"]:0.00436,'map|AGSR|A/SWINE/SASKATCHEWAN/SD0102/2015|swine|alpha3b-2|2015'[&aa_130="del",aa_129="del"]:0.00234)[&label=0.897]:0.00199)[&label=0.922]:0.00234,('map|Agonly|A/SWINE/ALBERTA/SD0191/2016|swine|alpha3b-2|2016'[&aa_130="del",aa_129="del"]:0.01822,('map|AGSR|A/SWINE/MINNESOTA/A01781045/2016|swine|alpha3b-2|2016'[&aa_130="del",aa_129="del"]:0.00671,'map|AGSR|A/SWINE/MANITOBA/SD0114/2015|swine|alpha3b-2|2015'[&aa_130="del",aa_129="del"]:0.00202)[&label=0.905]:0.0021)[&label=0.861]:0.00202)[&label=0.949]:0.00273,('map|Agonly|A/SWINE/MANITOBA/D0348/2014|swine|alpha3b-2|2014'[&aa_130="del",aa_129="del"]:0.00467,('map|Agonly|A/SWINE/SASKATCHEWAN/SD0200/2016|swine|alpha3b-2|2016'[&aa_130="del",aa_129="del"]:0.00664,'map|SRonly|A/SWINE/SASKATCHEWAN/SD0142/2016|swine|alpha3b-2|2016'[&aa_130="del",aa_129="del"]:5.4E-4)[&label=1.0]:0.01561)[&label=0.917]:0.00276)[&label=0.951]:0.00534)[&label=1.0]:0.02354)[&label=1.0]:0.0527)[&label=0.924]:0.01833)[&label=0.046]:0.00926)[&label=0.998]:0.02663,((((((('map|AGSR|A/OHIO/9/2015|hu-variant|gamma-variant|2015'[&aa_130="K",aa_129="N"]:0.00136,'map|Agonly|A/SWINE/OHIO/A01847657/2015|swine|gamma|2015'[&aa_130="K",aa_129="N"]:0.00131)[&label=0.948]:0.00401,('map|Agonly|A/SWINE/NORTH_CAROLINA/A01841602/2015|swine|gamma|2015'[&aa_130="K",aa_129="N"]:7.9E-4,'map|Agonly|A/SWINE/NORTH_CAROLINA/A02076926/2015|swine|gamma|2015'[&aa_130="K",aa_129="N"]:5.4E-4)[&label=0.947]:0.00408)[&label=1.0]:0.03501,('map|SRonly|A/SWINE/NORTH_CAROLINA/02023/2008|swine|gamma|2008'[&aa_130="R",aa_129="N"]:0.01393,(('map|SRonly|A/SWINE/OHIO/511445/2007|swine|gamma|2007'[&aa_130="R",aa_129="N"]:5.5E-4,(('map|Agonly|A/SWINE/MINNESOTA/A01567490/2014|swine|gamma|2014'[&aa_130="R",aa_129="N"]:0.00804,'map|AGSR|A/SWINE/IOWA/A01731653/2016|swine|gamma|2016'[&aa_130="R",aa_129="D"]:0.01796)[&label=0.996]:0.00986,('map|Agonly|A/SWINE/NORTH_CAROLINA/A01797415/2015|swine|gamma|2015'[&aa_130="R",aa_129="N"]:0.00802,'map|Agonly|A/SWINE/NORTH_CAROLINA/A01730369/2016|swine|gamma|2016'[&aa_130="R",aa_129="N"]:0.00533)[&label=1.0]:0.017)[&label=0.942]:0.00324)[&label=0.969]:6.0E-4,('map|SRonly|A/SWINE/OHIO/02026/2008|swine|gamma|2008'[&aa_130="R",aa_129="N"]:0.00571,'map|SRonly|A/SWINE/MISSOURI/02060/2008|swine|gamma|2008'[&aa_130="R",aa_129="D"]:0.01188)[&label=0.915]:0.00674)[&label=0.7]:7.8E-4)[&label=0.828]:0.00146)[&label=1.0]:0.01757,('map|SRonly|A/SWINE/KANSAS/00246/2004|swine|gamma|2004'[&aa_130="R",aa_129="N"]:0.00489,'map|SRonly|A/SWINE/MINNESOTA/00194/2003|swine|gamma|2003'[&aa_130="R",aa_129="N"]:0.00138)[&label=0.975]:0.0087)[&label=0.991]:0.00897,('map|SRonly|A/SWINE/MINNESOTA/1192/2001|swine|gamma-npdm-like|2001'[&aa_130="R",aa_129="D"]:0.00958,('map|Agonly|A/SWINE/MEXICO/AVX44/2012|swine|npdm|2012'[&aa_130="N",aa_129="N"]:0.03511,(('map|AGSR|A/MEXICO/4108/2009|hu-seasonal|npdm|2009'[&aa_130="K",aa_129="N"]:0.00197,'map|AGSR|A/CALIFORNIA/4/2009|hu-vaccine|npdm|2009'[&aa_130="K",aa_129="N"]:0.00395)[&label=0.853]:5.4E-4,('map|Agonly|A/SWINE/MEXICO/AVX31/2012|swine|npdm|2012'[&aa_130="K",aa_129="N"]:0.01144,('map|AGSR|A/SWINE/ILLINOIS/A01493472/2014|swine|npdm|2014'[&aa_130="K",aa_129="N"]:0.00324,'map|AGSR|A/MICHIGAN/45/2015|hu-vaccine|npdm|2015'[&aa_130="K",aa_129="N"]:0.00871)[&label=1.0]:0.01232)[&label=0.77]:0.00125)[&label=0.998]:0.01509)[&label=1.0]:0.03342)[&label=0.827]:0.00165)[&label=0.998]:0.01354,('map|excluded|A/SWINE/ILLINOIS/A01203922/2012|swine|gamma2|2012'[&aa_130="K",aa_129="S"]:0.06801,'map|SRonly|A/SWINE/SOUTH_DAKOTA/A01349306/2013|swine|gamma2|2013'[&aa_130="K",aa_129="N"]:0.05625)[&label=0.989]:0.01761)[&label=0.997]:0.01704,('map|SRonly|A/SWINE/MINNESOTA/37866/1999|swine|gamma2-beta-like|1999'[&aa_130="R",aa_129="S"]:0.02499,'map|Agonly|A/SWINE/MEXICO/AVX23/2012|swine|gamma2-beta-like|2012'[&aa_130="R",aa_129="D"]:0.06943)[&label=0.699]:0.00236)[&label=0.858]:0.0053);
+end;
+
+begin figtree;
+	set appearance.backgroundColorAttribute="Default";
+	set appearance.backgroundColour=#ffffff;
+	set appearance.branchColorAttribute="User selection";
+	set appearance.branchColorGradient=false;
+	set appearance.branchLineWidth=1.0;
+	set appearance.branchMinLineWidth=0.0;
+	set appearance.branchWidthAttribute="Fixed";
+	set appearance.foregroundColour=#000000;
+	set appearance.hilightingGradient=false;
+	set appearance.selectionColour=#2d3680;
+	set branchLabels.colorAttribute="User selection";
+	set branchLabels.displayAttribute="Branch times";
+	set branchLabels.fontName="Arial";
+	set branchLabels.fontSize=9;
+	set branchLabels.fontStyle=0;
+	set branchLabels.isShown=false;
+	set branchLabels.significantDigits=4;
+	set layout.expansion=0;
+	set layout.layoutType="RECTILINEAR";
+	set layout.zoom=0;
+	set legend.attribute="aa_129";
+	set legend.fontSize=10.0;
+	set legend.isShown=true;
+	set legend.significantDigits=4;
+	set nodeBars.barWidth=4.0;
+	set nodeBars.displayAttribute=null;
+	set nodeBars.isShown=false;
+	set nodeLabels.colorAttribute="User selection";
+	set nodeLabels.displayAttribute="Node ages";
+	set nodeLabels.fontName="Arial";
+	set nodeLabels.fontSize=9;
+	set nodeLabels.fontStyle=0;
+	set nodeLabels.isShown=false;
+	set nodeLabels.significantDigits=4;
+	set nodeShapeExternal.colourAttribute="User selection";
+	set nodeShapeExternal.isShown=false;
+	set nodeShapeExternal.minSize=10.0;
+	set nodeShapeExternal.scaleType=Width;
+	set nodeShapeExternal.shapeType=Circle;
+	set nodeShapeExternal.size=4.0;
+	set nodeShapeExternal.sizeAttribute="Fixed";
+	set nodeShapeInternal.colourAttribute="User selection";
+	set nodeShapeInternal.isShown=false;
+	set nodeShapeInternal.minSize=10.0;
+	set nodeShapeInternal.scaleType=Width;
+	set nodeShapeInternal.shapeType=Circle;
+	set nodeShapeInternal.size=4.0;
+	set nodeShapeInternal.sizeAttribute="Fixed";
+	set polarLayout.alignTipLabels=false;
+	set polarLayout.angularRange=0;
+	set polarLayout.rootAngle=0;
+	set polarLayout.rootLength=100;
+	set polarLayout.showRoot=true;
+	set radialLayout.spread=0.0;
+	set rectilinearLayout.alignTipLabels=false;
+	set rectilinearLayout.curvature=0;
+	set rectilinearLayout.rootLength=100;
+	set scale.offsetAge=0.0;
+	set scale.rootAge=1.0;
+	set scale.scaleFactor=1.0;
+	set scale.scaleRoot=false;
+	set scaleAxis.automaticScale=true;
+	set scaleAxis.fontSize=8.0;
+	set scaleAxis.isShown=false;
+	set scaleAxis.lineWidth=1.0;
+	set scaleAxis.majorTicks=1.0;
+	set scaleAxis.minorTicks=0.5;
+	set scaleAxis.origin=0.0;
+	set scaleAxis.reverseAxis=false;
+	set scaleAxis.showGrid=true;
+	set scaleBar.automaticScale=true;
+	set scaleBar.fontSize=10.0;
+	set scaleBar.isShown=true;
+	set scaleBar.lineWidth=1.0;
+	set scaleBar.scaleRange=0.0;
+	set tipLabels.colorAttribute="aa_129";
+	set tipLabels.displayAttribute="Names";
+	set tipLabels.fontName="Arial";
+	set tipLabels.fontSize=12;
+	set tipLabels.fontStyle=0;
+	set tipLabels.isShown=true;
+	set tipLabels.significantDigits=4;
+	set trees.order=true;
+	set trees.orderType="increasing";
+	set trees.rooting=false;
+	set trees.rootingType="User Selection";
+	set trees.transform=false;
+	set trees.transformType="cladogram";
+end;
+
