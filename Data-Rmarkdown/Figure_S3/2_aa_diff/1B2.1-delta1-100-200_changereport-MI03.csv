@@ -1,0 +1,7 @@
+Isolate,Number of Differences,Positions Different
+map|Agonly|A/MICHIGAN/2/2003|hu-vaccine|delta-like|2003,,
+map|AGSR|A/BEIJING/262/1995|hu-vaccine|delta-like|1995,10,"33, 53, 62, 63, 66, 75, 83, 87, 90, 91"
+map|AGSR|A/SWINE/MINNESOTA/A01134353/2011|swine|delta1a|2011,9,"41, 42, 49, 53, 62, 66, 68, 70, 87"
+map|notfound|A/SWINE/MINNESOTA/A01392045/2013|swine|delta1a|2013,9,"19, 42, 49, 53, 62, 66, 68, 70, 83"
+map|AGSR|A/SWINE/NEBRASKA/A01492366/2014|swine|delta1a|2014,9,"19, 42, 49, 53, 62, 66, 68, 70, 83"
+map|Agonly|A/SWINE/ILLINOIS/A01644323/2018|swine|delta1|2018,11,"19, 41, 42, 49, 53, 62, 66, 68, 70, 83, 89"
