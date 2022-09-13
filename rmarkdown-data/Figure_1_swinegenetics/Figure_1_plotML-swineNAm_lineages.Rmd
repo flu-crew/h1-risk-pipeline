@@ -101,7 +101,7 @@ lcols = c(
 
 ```{r}
 
-pdf(file = "figures/HA-H1iqtree-nodenums.pdf", 
+pdf(file = "figures/HA-H1iqtree-nodenums-tka.pdf", 
     #res = 300,
     height = 60,
     width = 70)#,
@@ -135,7 +135,7 @@ dev.off()
 ## H1 tree by lineage
 
 ```{r}
-png(filename = "./figures/Fig1_H1swineNAm2012-19_bylineage.png", 
+png(filename = "./figures/Fig1_H1swineNAm2012-19_bylineage-tka.png", 
     res = 300,
     height = 11.69*300,
     width = 8.27*300,
