@@ -1,0 +1,163 @@
+---
+title: "plotML_swineNAm_lineages"
+author: "Divya Venkatesh"
+date: "2022-09-13"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Clear workspace
+
+```{r}
+rm(list=ls()) 
+```
+
+## Load packages
+
+```{r}
+library(ggplot2)
+library(ggtree)
+library(tidyr)
+library(ape)
+```
+
+## Load tree, drop tips, load annotations
+
+```{r}
+HAtree <- read.tree("./data/db0.98-map-mauto.tre")
+
+library(phytools)
+HAmidtree <- midpoint.root(HAtree)
+HAmidtree <- drop.tip(HAmidtree,"map|swine|EU139826|H1N1|alpha|A/SWINE/IOWA/1973")
+HAmidtree <- drop.tip(HAmidtree,"bg|KU976737|A/swine/Mexico/AVX47/2013|Mexico|2013-01-08")
+
+dd <-  read.delim("./data/annotations5.txt", strip.white = T, sep = "\t" )
+```
+
+## Set colours - lineages
+
+```{r}
+
+lcols = c(
+ # "1A.1"="#800080",
+ # "1A.1-like"="#800080", #added by DV
+ # "1A.1.1"="#0099CC", # multiple clade names can map to same hex color
+ # "1A.1.1" = "#0099CC",
+  "1A.1.1-1" = "#0099CC",
+  "1A.1.1-2" = "#568899",
+  "1A.1.1-3" = "#0e5a73",
+  #"alpha"="#0099CC",  # ergo can add both global and us lineage names as needed
+ # "1A.1.2"="#33FFFF",  
+ # "1A.1.3"="#6666FF", 
+  "1A.2"="#CCCCFF",
+  #"beta"="#CCCCFF",    
+  #"1A.3"="#FF99FF",
+  "1A.3.1"="#8000FF",
+  "1A.2-3-like"="#8000FF", #added by DV
+  #"gamma2-beta-like"="#8000FF",
+  "1A.3.2"="#FF33FF",
+  #"gamma2"="#FF33FF",
+ # "1A.3.3"="#CC00CC",
+  #"1A.3.3.1"="#004080",
+  "1A.3.3.2"="#330066",
+  #"pandemic"="#330066",
+  "1A.3.3.3"="#3300FF",
+ # "gamma"="#3300FF",
+ # "Human"="#999999",
+ # "1B.1"="#FF9999",
+  #"1B.1.1"="#CC0033",
+ # "1B.1.2"="#FF66CC",
+ # "1B.1.2.1"="#B2478E",
+ # "1B.1.2.2"="#FF3300",
+ # "1B.1.2.3"="#FF9933",
+  #"1B.2"="#996633",
+  "Other_Human_1B.2"="#996633",
+  "1B.2.1"="#CC9900",
+ # "delta2"="#CC9900",
+  "1B.2.2"="#C48945",
+ # "delta1"="#C48945",
+  "1B.2.2.1"="#990066",
+  #"delta1a"="#990066",
+  "1B.2.2.2"="#FF6666",
+ # "delta1b"="#FF6666",
+  #"Avian"="#666666",
+ # "1C.1"="#00FF00",
+ # "1C.2"="#12AD2A",
+ # "1C.2.1"="#B9FF4D",
+ # "1C.2.2"="#006600",
+ # "1C.2.3"="#0FF591",
+  #"Vaccine"="#333333",
+  "Human"="#333333"
+  #"Other_Human"="#CC0000",
+ #"NA"="grey"
+  #"human"="#999999"
+)
+```
+
+## Testing-get node nums
+
+```{r}
+
+pdf(file = "figures/HA-H1iqtree-nodenums.pdf", 
+    #res = 300,
+    height = 60,
+    width = 70)#,
+
+(p1 <-  ggtree(HAmidtree, right = T) %<+% dd +
+  #geom_point2(aes(subset= !is.na(node.label) & label > 85), shape=18, size=2.5) +
+  geom_tippoint(aes(color = new_global_lineage), size = 3) +
+  geom_tiplab(size =3) + 
+  scale_color_manual(values = lcols) +
+  geom_cladelabel(node=678, label="gamma (1A.3.3.3)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=773, label="pandemic (1A.3.3.2)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=842, label="beta (1A.2)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=620, label="alpha (1A.1.1)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=494, label="delta1 (1B.2.2)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=444, label="delta2 (1B.2.1)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  #geom_text2(aes(subset= (node == 440),label="1B"), hjust=1.2, vjust=-1.0, size = 5) +
+  #geom_text2(aes(subset= (node == 611),label="1A"), hjust=1.2, vjust=-1.0, size = 5) +
+  geom_text2(aes(subset = !isTip, label = node, hjust=1.2, vjust=-0.4, size =1)) +
+  geom_treescale(offset = 2, y = -3) + 
+  ggtitle("HA H1 nodenumbers") +
+  theme(legend.position="right",
+        text = element_text(size =20)))
+  
+
+ 
+dev.off()
+  
+         
+```
+
+## H1 tree by lineage
+
+```{r}
+png(filename = "./figures/Fig1_H1swineNAm2012-19_bylineage.png", 
+    res = 300,
+    height = 11.69*300,
+    width = 8.27*300,
+    pointsize = 12)
+
+(p4 <-  ggtree(HAmidtree, right = T) %<+% dd +
+  geom_nodepoint(aes(subset = label >0.80), shape = 18, size =1.75) +
+  geom_tippoint(aes(color = new_global_lineage), size = 1.75) +
+  scale_color_manual(values =lcols) +
+  geom_cladelabel(node=678, label="gamma (1A.3.3.3)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=773, label="pandemic (1A.3.3.2)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=842, label="beta (1A.2)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=620, label="alpha (1A.1.1)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=494, label="delta1 (1B.2.2)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_cladelabel(node=444, label="delta2 (1B.2.1)", align=T, angle=270, hjust='center', offset.text = 0.005) +
+  geom_text2(aes(subset= (node == 440),label="1B"), hjust=1.2, vjust=-0.1, size = 6) +
+  geom_text2(aes(subset= (node == 611),label="1A"), hjust=1.2, vjust=-0.4, size = 6) +
+  geom_treescale(offset = 2, y = -3, fontsize = 4) + 
+  theme(legend.position="right",
+        text = element_text(size = 14)) +
+  labs(color = "Lineage")) 
+
+dev.off()
+
+```
